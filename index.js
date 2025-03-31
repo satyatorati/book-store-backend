@@ -23,6 +23,8 @@ const userRoutes = require("./src/users/user.route")
 
 const adminRoutes = require("./src/stats/admin.stats")
 
+const chatRoutes = require("./src/chat/chat.route")
+
 app.use("/api/admin", adminRoutes)
 
 app.use("/api/auth", userRoutes)
@@ -30,6 +32,8 @@ app.use("/api/auth", userRoutes)
 app.use("/api/orders", orderRoutes)
 
 app.use("/api/books", bookRoutes)
+
+app.use("/api/chat", chatRoutes)
 
 
 
