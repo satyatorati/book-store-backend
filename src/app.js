@@ -11,8 +11,10 @@ const app = express();
 app.use(cors({
     origin: [
         'http://localhost:5173', // Local development
-        'https://your-frontend-url.vercel.app' // Deployed frontend URL
+        'https://book-store-flax.vercel.app' // Deployed frontend URL
     ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
 
